@@ -1,6 +1,13 @@
 package main
 
-func main() {
+import (
+	"fmt"
 
-	// Place your code here.
+	"golang.org/x/example/hello/reverse"
+)
+
+func main() {
+	// Переворачиваем строку "Hello, OTUS!"
+	result := reverse.String("Hello, OTUS!")
+	fmt.Println(result)
 }
