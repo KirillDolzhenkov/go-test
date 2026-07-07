@@ -15,21 +15,14 @@ func Unpack(str string) (string, error) {
 
 	for i := 0; i < len(runes); i++ {
 		if unicode.IsLetter(runes[i]) {
-
 			if i+1 < len(runes) && unicode.IsDigit(runes[i+1]) {
 				count := int(runes[i+1] - '0')
-				letter := string(runes[i])
-				newStr := strings.Repeat(letter, count)
 
-				result.WriteString(newStr)
+				result.WriteString(strings.Repeat(string(runes[i]), count))
 			} else {
-				letter := string(runes[i])
-
-				result.WriteString(letter)
+				result.WriteString(string(runes[i]))
 			}
-
 		} else if unicode.IsDigit(runes[i]) {
-
 			if i == 0 || unicode.IsLetter(runes[i-1]) == false && unicode.IsDigit(runes[i-1]) {
 				return "", ErrInvalidString
 			}
