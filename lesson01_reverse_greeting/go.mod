@@ -1,4 +1,4 @@
-module github.com/your_github_user/lesson01_reverse_greeting
+module github.com/KirillDolzhenkov/lesson01_reverse_greeting
 
 go 1.23
 
