@@ -1,4 +1,4 @@
-module github.com/your_github_user/lesson02_unpack_string
+module github.com/KirillDolzhenkov/lesson02_unpack_string
 
 go 1.23
 
